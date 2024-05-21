@@ -1,0 +1,54 @@
+<div class="container">
+    <h3 class="demo"><b>DEMO APP</b></h3>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">JOBS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CLIENTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">EMPLOYERS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <h3 class="italic"><i>I'm looking for...</i></h3>
+    <input class="place" type="text" placeholder="Enter a Job Description">
+    <button class="btn">Search</button><br><br>
+  
+    <input type="checkbox" id="fullTime" name="jobType" value="fullTime">
+    <label for="fullTime">Full Time</label>
+    <input type="checkbox" id="partTime" name="jobType" value="partTime">
+    <label for="partTime">Part Time/Casual/Freelance</label>
+  
+    <label class="label" for="location">Choose a Location:</label>
+    <select id="location" name="location">
+      <option value="pune">Pune</option>
+      <option value="mumbai">Mumbai</option>
+      <option value="nashik">Nashik</option>
+      <option value="bangalore">Bangalore</option>
+      <option value="chennai">Chennai</option>
+    </select><br><br>
+  
+    <button class="register" (click)="openRegister()">Register</button>
+  </div>
+  

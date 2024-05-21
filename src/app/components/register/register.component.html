@@ -1,0 +1,51 @@
+<div class="container">
+    <h2>Register</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="photo">Upload Photo</label>
+        <input type="file" id="photo" (change)="onFileChange($event)" class="form-control" />
+      </div>
+      <div>
+        <label for="firstName"></label>
+        <input id="firstName" placeholder="First Name" formControlName="firstName">
+        <div *ngIf="registrationForm.controls['firstName'].errors">
+          <small *ngIf="registrationForm.controls['firstName'].errors['required']">First Name is required</small>
+          <small *ngIf="registrationForm.controls['firstName'].errors['pattern']">Invalid First Name</small>
+        </div>
+      </div>
+      <div>
+        <label for="lastName"></label>
+        <input id="lastName" placeholder="Last Name" formControlName="lastName">
+        <div *ngIf="registrationForm.controls['lastName'].errors">
+          <small *ngIf="registrationForm.controls['lastName'].errors['required']">Last Name is required</small>
+          <small *ngIf="registrationForm.controls['lastName'].errors['pattern']">Invalid Last Name</small>
+        </div>
+      </div>
+      <div>
+        <label for="email"></label>
+        <input id="email" placeholder="Email" formControlName="email">
+        <div *ngIf="registrationForm.controls['email'].errors">
+          <small *ngIf="registrationForm.controls['email'].errors['required']">Email is required</small>
+          <small *ngIf="registrationForm.controls['email'].errors['email']">Invalid Email</small>
+        </div>
+      </div>
+      <div>
+        <label for="phone"></label>
+        <input id="phone" placeholder="Phone" formControlName="phone">
+        <div *ngIf="registrationForm.controls['phone'].errors">
+          <small *ngIf="registrationForm.controls['phone'].errors['required']">Phone is required</small>
+          <small *ngIf="registrationForm.controls['phone'].errors['pattern']">Invalid Phone Number</small>
+        </div>
+      </div>
+      <div>
+        <label for="location"></label>
+        <input id="location" placeholder="Location" formControlName="location">
+        <div *ngIf="registrationForm.controls['location'].errors">
+          <small *ngIf="registrationForm.controls['location'].errors['required']">Location is required</small>
+          <small *ngIf="registrationForm.controls['location'].errors['pattern']">Invalid Location</small>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
